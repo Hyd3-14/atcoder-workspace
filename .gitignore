@@ -1,0 +1,25 @@
+# コンパイル済みバイナリ
+*.out
+*.exe
+*.o
+*.class
+
+# acc/oj が生成するテストケースディレクトリ
+test/
+tests/
+
+# 入力ファイルなど
+*.in
+*.txt
+
+# accの一時ファイル（configは残すが、session情報は念のため除外）
+.acc/
+!/.acc/config.json
+!/.acc/template.json
+
+# VS Code設定（共有したくなければ除外）
+# .vscode/
+
+# Pythonキャッシュ
+__pycache__/
+*.pyc
