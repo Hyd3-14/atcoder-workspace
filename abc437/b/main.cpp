@@ -38,4 +38,28 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int h, w, n;
+    cin >> h >> w >> n;
+
+    vvi a(h, vi(w));
+    rep(i, 0, h) rep(j, 0, w) cin >> a[i][j];
+    set<int> b;
+    rep(i, 0, n) {
+        int x;
+        cin >> x;
+        b.insert(x);
+    }
+
+    int max = 0;
+    rep(i, 0, h) {
+        int cnt = 0;
+        rep(j, 0, w) {
+            if (b.count(a[i][j]))
+                cnt++;
+        }
+        if (cnt > max)
+            max = cnt;
+    }
+    cout << max << el;
 }
