@@ -38,4 +38,37 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int T;
+    cin >> T;
+    while (T--) {
+        int n;
+        cin >> n;
+        vec<pii> v(n);
+        ll rider = 0;
+        ll sum_w = 0;
+        ll sum_p = 0;
+        rep(i, 0, n) {
+            int w, p;
+            cin >> w >> p;
+            v.at(i) = make_pair(p, w);
+            sum_w += w;
+        }
+
+        reverse(all(v));
+
+        rider = n;
+        rep(i, 0, n) {
+            if (sum_w < sum_p)
+                break;
+            rider--;
+            sum_p += v[i].first;
+            sum_w -= v[i].second;
+            debug(i);
+            debug(sum_p);
+            debug(sum_w);
+        }
+
+        cout << rider << el;
+    }
 }

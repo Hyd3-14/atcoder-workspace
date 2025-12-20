@@ -16,7 +16,7 @@ using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 
 const int INF = 1e9;
-const int MOD = 1e9 + 7;
+const int MOD = 998244353;
 const ll LINF = 1e18;
 
 #define rep(i, x, limit) for (int i = (int)x; i < (int)limit; i++)
@@ -38,4 +38,26 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n, m;
+    cin >> n >> m;
+
+    vl a(n), b(n);
+    rep(i, 0, n) cin >> a[i];
+    rep(i, 0, m) cin >> b[i];
+
+    sort(all(a));
+    sort(all(b));
+
+    ll ans = 0;
+    rep(i, 0, n) {
+        auto iter = lower_bound(all(b), a[i]);
+        int idx = iter - a.begin();
+        ans += a[i] * idx;
+        ans -= b[i] * (n - 1 - idx);
+        debug(idx);
+        debug(a[i]);
+        debug(b[idx]);
+    }
+    cout << ans << el;
 }
