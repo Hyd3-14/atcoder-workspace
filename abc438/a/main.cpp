@@ -42,5 +42,12 @@ int main() {
     int d, f;
     cin >> d >> f;
 
-    cout << (d - f + 7) % d << el;
+    int sum = f;
+    while (1) {
+        sum += 7;
+        if (sum > d)
+            break;
+    }
+
+    cout << sum % d << el;
 }
