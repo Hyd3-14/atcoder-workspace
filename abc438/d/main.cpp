@@ -59,10 +59,13 @@ int main() {
     }
 
     int ans = 0;
-    rep(x, 1, n) {
-        rep(y, x + 1, n) {
-            ans = max(ans, sa[x] + sb[y] - sb[x] + sc[n] - sc[y]);
-        }
-    }
-    cout << ans << el;
+    // x: 0~n-2, y: 1~x~n-1,
+    vi X(n + 1, 0), Y(n + 1, 0);
+    rep(x, 1, n) { X[x] = sa[x] - sb[x]; }
+    rep(y, 2, n) { Y[y] = sb[y] - sc[y]; }
+    // ans = max(ans, sa[x] + sb[y] - sb[x] + sc[n] - sc[y]);
+
+    rep(i, 0, n) { ans = max(ans, X[i] + Y[n - i]); }
+
+    cout << ans + sc[n] << el;
 }
