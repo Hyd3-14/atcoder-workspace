@@ -38,4 +38,23 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n, m;
+    cin >> n >> m;
+    string s, t;
+    cin >> s >> t;
+
+    int ans = 1e9;
+    debug(s.length() - t.length());
+
+    rep(i, 0, s.length() - t.length() + 1) {
+        int diff = 0;
+        rep(j, 0, t.length()) {
+            diff += abs(s[i + j] - t[j] + 10) % 10;
+            debug(diff);
+        }
+        if (diff < ans)
+            ans = diff;
+    }
+    cout << ans << el;
 }
