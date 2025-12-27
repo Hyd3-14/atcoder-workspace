@@ -65,10 +65,12 @@ int main() {
     rep(i, 0, Rle.size() - 2) {
         if (Rle[i + 1].second >= 4) {
             ans -= Rle[i + 1].second;
-            if (Rle[i].first == Rle[i + 2].first) {
-                int len = Rle[i].second + Rle[i + 2].second;
-                if (len >= 4)
-                    ans -= len;
+            for (int j = 0; Rle[i - j].first == Rle[i + 2 + j].first; j++) {
+                if (Rle[i - j].first == Rle[i + 2 + j].first) {
+                    int len = Rle[i - j].second + Rle[i + 2 + j].second;
+                    if (len >= 4)
+                        ans -= len;
+                }
             }
         }
     }
