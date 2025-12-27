@@ -61,7 +61,7 @@ int main() {
     int ans = 0;
     rep(x, 1, n) {
         rep(y, x + 1, n) {
-            ans = max(ans, sa[x] + sb[y] - sb[y - 1] + sc[n] - sc[y]);
+            ans = max(ans, sa[x] + sb[y] - sb[x] + sc[n] - sc[y]);
         }
     }
     cout << ans << el;
