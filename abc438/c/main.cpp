@@ -68,11 +68,11 @@ int main() {
             for (int j = 0; Rle[i - j].first == Rle[i + 2 + j].first; j++) {
                 if (Rle[i - j].first == Rle[i + 2 + j].first) {
                     int len = Rle[i - j].second + Rle[i + 2 + j].second;
-                    if (len >= 4)
+                    if (len >= 4) {
                         ans -= len;
+                    }
                 }
             }
         }
+        cout << ans << el;
     }
-    cout << ans << el;
-}

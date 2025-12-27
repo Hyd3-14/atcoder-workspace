@@ -38,4 +38,31 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    vi a(n), b(n), c(n);
+    vi sa(n + 1, 0), sb(n + 1, 0), sc(n + 1, 0);
+
+    rep(i, 0, n) {
+        cin >> a[i];
+        sa[i + 1] = a[i] + sa[i];
+    }
+    rep(i, 0, n) {
+        cin >> b[i];
+        sb[i + 1] = b[i] + sb[i];
+    }
+    rep(i, 0, n) {
+        cin >> c[i];
+        sc[i + 1] = c[i] + sc[i];
+    }
+
+    int ans = 0;
+    rep(x, 1, n) {
+        rep(y, x + 1, n) {
+            ans = max(ans, sa[x] + sb[y] - sb[y - 1] + sc[n] - sc[y]);
+        }
+    }
+    cout << ans << el;
 }
