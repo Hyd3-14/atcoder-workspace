@@ -35,7 +35,42 @@ const ll LINF = 1e18;
 #define Equals(a, b) (fabs((a) - (b)) < eps)
 #define debug(x) cerr << #x << " = " << x << el
 
+void rle(vi v, vector<pair<int, int>> &vec) {
+    int cnt = 1;
+    for (int i = 1; i < (int)v.size(); i++) {
+        if (v[i] != v[i - 1]) {
+            vec.push_back({v[i - 1], cnt});
+            cnt = 0;
+        }
+        cnt++;
+    }
+    vec.push_back({v.back(), cnt});
+}
+
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+    vi a(n);
+    rep(i, 0, n) cin >> a[i];
+
+    // 1 <= k <= |a|-3
+    vec<pair<int, int>> Rle;
+    rle(a, Rle);
+
+    int ans = n;
+    // debug(Rle.size());
+    rep(i, 0, Rle.size() - 2) {
+        if (Rle[i + 1].second >= 4) {
+            ans -= Rle[i + 1].second;
+            if (Rle[i].first == Rle[i + 2].first) {
+                int len = Rle[i].second + Rle[i + 2].second;
+                if (len >= 4)
+                    ans -= len;
+            }
+        }
+    }
+    cout << ans << el;
 }
