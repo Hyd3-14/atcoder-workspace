@@ -38,4 +38,37 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    int rtn = sqrt(n);
+    debug(rtn);
+    vi v(rtn);
+    rep(i, 1, n + 1) { v.push_back(i); }
+    // 0 < x < y
+    // 0 < x^2 + y^2 < 2y^2 <= n
+
+    // x^2 + y^2 = n
+    // y^2 = n - x^2
+    set<int> a;
+
+    rep(i, 1, n + 1) {
+        debug(i);
+        if (lower_bound(all(v), sqrt(n - i)) == v.end())
+            break;
+        int y2 = *lower_bound(all(v), sqrt(n - i));
+        debug(y2);
+
+        if (y2 != i * i) {
+            if (sqrt(i - y2 * y2) == (int)sqrt(i - y2 * y2)) {
+                a.insert(i);
+            }
+        }
+    }
+
+    cout << a.size() << el;
+    for (auto k : a) {
+        cout << k << spa;
+    }
 }
