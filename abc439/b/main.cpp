@@ -35,7 +35,32 @@ const ll LINF = 1e18;
 #define Equals(a, b) (fabs((a) - (b)) < eps)
 #define debug(x) cerr << #x << " = " << x << el
 
+set<int> s;
+
+void func(int n) {
+    int sum = 0;
+    while (n != 0) {
+        sum += (n % 10) * (n % 10);
+        n /= 10;
+    }
+    if (sum == 1) {
+        Yes;
+        return;
+    }
+    if (s.count(sum)) {
+        No;
+        return;
+    }
+    s.insert(sum);
+    func(sum);
+}
+
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    func(n);
 }
