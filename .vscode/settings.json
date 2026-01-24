@@ -1,10 +1,18 @@
 {
   "github.copilot.chat.commitMessageGeneration.instructions": [
+    // "text": "Rule: .github/copilot-instructions.md に記載されている「コミットメッセージ生成規則」を厳守してください。"
+    // "text": "Constraint: Scopeは必ず [ui, page, api, db, auth, config, dev, deps, log] の中から最も適切なものを1つ選んでください。"
     {
-      "file": ".copilot-commit-message-instructions.md"
+      "text": "Language: 必ず日本語で生成してください。"
     },
     {
-      "text": "Use conventional commit message format."
+      "text": "Format: Conventional Commits (<type>(<scope>): <subject>) を使用し、ヘッダー・空行・詳細の3段構成にしてください。"
+    },
+    {
+      "text": "Detail: なぜその変更を行ったか(Why)を箇条書きで記述してください。変更箇所が自明な場合は簡潔にまとめてください。"
+    },
+    {
+      "text": "Content: 変更内容を網羅的に記述してください。"
     }
   ]
 }
