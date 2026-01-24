@@ -123,5 +123,7 @@ int main() {
         cout << v;
         if (i != n - 1)
             cout << spa;
+        else
+            cout << el;
     }
 }
