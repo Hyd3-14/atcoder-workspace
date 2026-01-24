@@ -38,4 +38,42 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n, q;
+    cin >> n >> q;
+
+    vi a(n), s(n + 1, 0);
+    rep(i, 0, n) {
+        cin >> a[i];
+        s[i + 1] = s[i] + a[i];
+        // cout << "s[" << i + 1 << "]= " << s[i + 1] << el;
+    }
+
+    while (q--) {
+        int p;
+        cin >> p;
+        if (p == 1) {
+            int x;
+            cin >> x;
+            // swap(a[x], a[x + 1]);
+            // s[1] = 7 - 1 = 6
+            // s[2] = 1 - 7 = -6
+            int diff = a[x] - a[x - 1];
+            // debug(diff);
+            s[x] += diff;
+            // s[x + 1] += -diff;
+            swap(a[x], a[x - 1]);
+        }
+        if (p == 2) {
+            int l, r;
+            cin >> l >> r;
+            // l--, r--;
+            // debug(l);
+            // debug(s[l]);
+            // debug(r);
+            // debug(s[r]);
+            cerr << el;
+            cout << s[r] - s[l - 1] << el;
+        }
+    }
 }
