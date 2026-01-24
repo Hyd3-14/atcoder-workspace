@@ -38,4 +38,28 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int q;
+    cin >> q;
+
+    int volume = 0;
+    bool playing = false;
+    rep(i, 0, q) {
+        int a;
+        cin >> a;
+
+        if (a == 1) {
+            volume++;
+        }
+        if (a == 2) {
+            volume = max(0, volume - 1);
+        }
+        if (a == 3) {
+            playing = !playing;
+        }
+        if (playing && volume >= 3)
+            Yes;
+        else
+            No;
+    }
 }
