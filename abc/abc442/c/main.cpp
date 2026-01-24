@@ -120,10 +120,10 @@ int main() {
         init();
 
         ll v = nCk(sum, 3);
-        cout << v;
-        if (i != n - 1)
-            cout << spa;
-        else
-            cout << el;
+        cout << v << spa;
+        // if (i != n - 1)
+        //     cout << spa;
+        // else
+        //     cout << el;
     }
 }
