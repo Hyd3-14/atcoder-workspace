@@ -38,4 +38,20 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    int maxl = 0;
+    vec<string> s(n);
+    rep(i, 0, n) {
+        cin >> s[i];
+        maxl = max(maxl, (int)s[i].length());
+    };
+    rep(i, 0, n) {
+        int dots = (maxl - s[i].length()) / 2;
+        string d = "";
+        rep(k, 0, dots) d += ".";
+        cout << d << s[i] << d << el;
+    }
 }
