@@ -38,4 +38,31 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    vi a(n);
+    rep(i, 0, n) {
+        cin >> a[i];
+        a[i]--;
+    }
+
+    rep(s, 0, n) {
+        int x = s;
+        vi visited(n, 0);
+        while (1) {
+            if (visited[x] == 1) {
+                cout << a[x] + 1 << spa;
+                break;
+            }
+
+            visited[x] = 1;
+            x = a[x];
+            if (x == a[x]) {
+                cout << a[x] + 1 << spa;
+                break;
+            }
+        }
+    }
 }
