@@ -48,19 +48,25 @@ int main() {
         a[i]--;
     }
 
-    vi visited(n, 0);
+    vi visited(n, -1);
+    vi goals(n);
     rep(s, 0, n) {
         int x = s;
         while (1) {
             if (visited[x] == 1) {
-                cout << a[a[a[x]]] + 1 << spa;
+                cout << goals[x] << spa;
                 break;
             }
 
-            visited[x] = 1;
+            visited[x] = -2;
             x = a[x];
             if (x == a[x]) {
-                cout << a[x] + 1 << spa;
+                goals[x] = a[x] + 1;
+                cout << goals[x] << spa;
+                rep(k, 0, n) {
+                    if (visited[k] == -2)
+                        goals[k] = goals[x];
+                }
                 break;
             }
         }
