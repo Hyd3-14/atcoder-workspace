@@ -48,7 +48,6 @@ int main() {
         a[i]--;
     }
 
-    vi visited(n, -1);
     vi goals(n);
     rep(s, 0, n) {
         int x = s;
@@ -58,7 +57,6 @@ int main() {
                 break;
             }
 
-            visited[x] = 1;
             x = a[x];
             if (x == a[x]) {
                 goals[x] = a[x] + 1;
