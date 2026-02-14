@@ -71,7 +71,7 @@ int main() {
             }
             int idx = find(all(visited), x) - visited.begin();
             if (idx != visited.end() - visited.begin()) {
-                goals[x] = visited[pow(idx - x, 100)];
+                goals[x] = visited[idx + pow((idx - x) % 10, 100)];
                 cout << goals[x] << spa;
                 break;
             }
