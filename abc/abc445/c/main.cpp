@@ -51,6 +51,7 @@ int main() {
     vi goals(n, -1);
     rep(s, 0, n) {
         int x = s;
+        vi visited;
         while (1) {
             if (x < s) {
                 cout << goals[s] << spa;
@@ -61,9 +62,16 @@ int main() {
                 break;
             }
 
+            visited.emplace_back(x);
             x = a[x];
             if (x == a[x]) {
                 goals[x] = a[x] + 1;
+                cout << goals[x] << spa;
+                break;
+            }
+            int idx = find(all(visited), x) - visited.begin();
+            if (idx != visited.end() - visited.begin()) {
+                goals[x] = visited[pow(idx - x, 100)];
                 cout << goals[x] << spa;
                 break;
             }
