@@ -53,18 +53,18 @@ int main() {
     rep(s, 0, n) {
         int x = s;
         while (1) {
-            if (visited[x] == 1) {
-                cout << goals[x] << spa;
+            if (x < s) {
+                cout << goals[s] << spa;
                 break;
             }
 
-            visited[x] = -2;
+            visited[x] = 1;
             x = a[x];
             if (x == a[x]) {
                 goals[x] = a[x] + 1;
                 cout << goals[x] << spa;
                 rep(k, 0, n) {
-                    if (visited[k] == -2)
+                    if (visited[k] == 1)
                         goals[k] = goals[x];
                 }
                 break;
