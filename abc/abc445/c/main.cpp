@@ -48,12 +48,12 @@ int main() {
         a[i]--;
     }
 
+    vi visited(n, 0);
     rep(s, 0, n) {
         int x = s;
-        vi visited(n, 0);
         while (1) {
             if (visited[x] == 1) {
-                cout << a[x] + 1 << spa;
+                cout << a[a[a[x]]] + 1 << spa;
                 break;
             }
 
