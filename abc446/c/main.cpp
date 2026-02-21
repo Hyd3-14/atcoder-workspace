@@ -47,7 +47,7 @@ int main() {
 
         vi a(n), b(n);
 
-        debug(T);
+        // debug(T);
         deque<int> counts;
         rep(i, 0, n) {
             cin >> a[i];
