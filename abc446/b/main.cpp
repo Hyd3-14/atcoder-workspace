@@ -38,4 +38,31 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int n, m;
+    cin >> n >> m;
+
+    set<int> drunk;
+    rep(i, 0, n) {
+        debug(drunk.size());
+        int l;
+        cin >> l;
+
+        bool water = true;
+        rep(j, 0, l) {
+            int x;
+            cin >> x;
+            if (!water)
+                continue;
+            debug(drunk.count(x));
+            if (drunk.count(x) == 0) {
+                debug(x);
+                cout << x << el;
+                drunk.insert(x);
+                water = false;
+            }
+        }
+        if (water)
+            cout << 0 << el;
+    }
 }
