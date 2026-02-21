@@ -38,4 +38,44 @@ const ll LINF = 1e18;
 int main() {
     ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
+
+    int T;
+    cin >> T;
+    while (T--) {
+        int n, d;
+        cin >> n >> d;
+
+        vi a(n), b(n);
+
+        debug(T);
+        deque<int> counts;
+        rep(i, 0, n) { cin >> a[i]; }
+        rep(i, 0, n) {
+            bool decayed = true;
+            cin >> b[i];
+            counts.push_back(a[i]);
+            while (b[i] > 0) {
+                if (counts.front() > b[i]) {
+                    counts.front() -= b[i];
+                    break;
+                } else {
+                    b[i] -= counts.front();
+                    counts.pop_front();
+                    decayed = false;
+                }
+            }
+            if (decayed && d <= i)
+                counts.pop_front();
+            int suma = 0;
+            for (auto s : counts) {
+                suma += s;
+            }
+            debug(suma);
+        }
+        int sum = 0;
+        for (auto s : counts) {
+            sum += s;
+        }
+        cout << sum << el;
+    }
 }
