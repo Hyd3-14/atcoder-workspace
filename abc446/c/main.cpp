@@ -57,7 +57,7 @@ int main() {
             bool decayed = true;
             cin >> b[i];
             while (b[i] > 0) {
-                if (counts.front() > b[i]) {
+                if (counts.front() >= b[i]) {
                     counts.front() -= b[i];
                     break;
                 } else {
