@@ -49,11 +49,13 @@ int main() {
 
         debug(T);
         deque<int> counts;
-        rep(i, 0, n) { cin >> a[i]; }
+        rep(i, 0, n) {
+            cin >> a[i];
+            counts.push_back(a[i]);
+        }
         rep(i, 0, n) {
             bool decayed = true;
             cin >> b[i];
-            counts.push_back(a[i]);
             while (b[i] > 0) {
                 if (counts.front() > b[i]) {
                     counts.front() -= b[i];
