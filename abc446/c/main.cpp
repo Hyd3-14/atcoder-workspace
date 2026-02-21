@@ -66,11 +66,11 @@ int main() {
             }
             if (decayed && d <= i)
                 counts.pop_front();
-            int suma = 0;
-            for (auto s : counts) {
-                suma += s;
-            }
-            debug(suma);
+            // int suma = 0;
+            // for (auto s : counts) {
+            //     suma += s;
+            // }
+            // debug(suma);
         }
         int sum = 0;
         for (auto s : counts) {
