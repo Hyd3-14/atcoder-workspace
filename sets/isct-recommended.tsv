@@ -1,0 +1,25 @@
+02_prefix_sum	tessoku-book	a06	math_and_algorithm_ai	https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ai	How Many Guests
+02_prefix_sum	tessoku-book	a07	tessoku_book_g	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_g	Event Attendance
+02_prefix_sum	tessoku-book	a08	tessoku_book_h	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h	Two Dimensional Sum
+02_prefix_sum	tessoku-book	a10	tessoku_book_j	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_j	Resort Hotel
+
+03_binary_search	tessoku-book	a11	tessoku_book_k	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k	Binary Search 1
+03_binary_search	tessoku-book	a12	tessoku_book_l	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l	Printer
+03_binary_search	tessoku-book	a13	tessoku_book_m	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_m	Close Pairs
+03_binary_search	tessoku-book	a14	tessoku_book_n	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_n	Four Boxes
+03_binary_search	tessoku-book	a15	tessoku_book_o	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_o	Compression
+
+05_data_structure	tessoku-book	a51	tessoku_book_ay	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ay	Stack
+05_data_structure	tessoku-book	a52	tessoku_book_az	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_az	Queue
+05_data_structure	tessoku-book	a53	tessoku_book_ba	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ba	Priority Queue
+05_data_structure	tessoku-book	a54	tessoku_book_bb	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bb	Map
+05_data_structure	tessoku-book	a55	tessoku_book_bc	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bc	Set
+
+04_graph	tessoku-book	a61	tessoku_book_bi	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bi	Adjacent Vertices
+04_graph	tessoku-book	a62	math_and_algorithm_am	https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_am	Depth First Search
+04_graph	tessoku-book	a63	math_and_algorithm_an	https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_an	Shortest Path 1
+04_graph	tessoku-book	a64	tessoku_book_bl	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bl	Shortest Path 2
+04_graph	tessoku-book	a66	tessoku_book_bn	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bn	Connect Query
+04_graph	tessoku-book	a67	tessoku_book_bo	https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bo	MST
+
+06_greedy	tessoku-book	a39	math_and_algorithm_bn	https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_bn	Interval Scheduling Problem
